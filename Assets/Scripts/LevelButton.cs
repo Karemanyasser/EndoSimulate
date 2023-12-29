@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.PlayerLoop;
 
 public class LevelButton : MonoBehaviour
 {
@@ -10,11 +11,13 @@ public class LevelButton : MonoBehaviour
     public Button quit; // define button. 
     public GameObject Panel; 
 
+    public int sceneindex;
+
     // Start is called before the first frame update
     void Start()
     {
         button1.onClick.AddListener(Level); // when we click on button ,execute 'Level function'.
-        start.onClick.AddListener(KneeStart); // when we click on button ,execute 'KneeStart function'.
+        start.onClick.AddListener(StartButton); // when we click on button ,execute 'StartButton function'.
         quit.onClick.AddListener(QuitButton); // when we click on button ,execute 'QuitButton function'.
         
     }
@@ -22,9 +25,9 @@ public class LevelButton : MonoBehaviour
     {
         Panel.SetActive(true);  //activate panel.
     }
-    void KneeStart()
+    void StartButton()
     {
-        SceneManager.LoadScene("Room");  // Go to room scene
+        SceneManager.LoadScene(sceneindex);  // Go to room scene
 
     }
     void QuitButton()

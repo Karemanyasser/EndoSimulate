@@ -5,6 +5,7 @@ public class Back : MonoBehaviour
 {
    
     public Button button1; // define button. 
+    public int sceneindex;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class Back : MonoBehaviour
 
     void BackButton()
     {
-        SceneManager.LoadScene("StartScene");  // return to defualt scene.
+        SceneManager.LoadScene(sceneindex);  // return to previous scene.
         
     }
 }
