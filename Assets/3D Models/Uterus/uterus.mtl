@@ -1,0 +1,25 @@
+# Blender 3.6.1 MTL File: 'None'
+# www.blender.org
+
+newmtl Ovary2
+Ns 95.999992
+Ka 1.000000 1.000000 1.000000
+Ks 0.423000 0.423000 0.423000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd female-reproductive-organs-whole/source/Uterus-Whole.zip/Map__389_Mix.png
+map_refl female-reproductive-organs-whole/source/Uterus-Whole.zip/Map__389_Mix.png
+map_Ke female-reproductive-organs-whole/source/Uterus-Whole.zip/Map__394_Falloff.png
+map_Bump female-reproductive-organs-whole/source/Uterus-Whole.zip/Map__576_Mix.png
+
+newmtl Uterus_Whole
+Ns 100.000015
+Ka 1.000000 1.000000 1.000000
+Ks 0.883867 0.883867 0.883867
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd female-reproductive-organs-whole/source/Uterus-Whole.zip/UterusWhole FINAL.jpg
+map_refl female-reproductive-organs-whole/source/Uterus-Whole.zip/UterusCapillaries.jpg
+map_Ke female-reproductive-organs-whole/source/Uterus-Whole.zip/Map__541_Falloff.png
