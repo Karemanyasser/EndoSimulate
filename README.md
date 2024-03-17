@@ -1,8 +1,8 @@
-# EndoSimulate, Graduation project of 4th year biomedical Engineer students- Cairo University
+# EndoSimulate, Graduation project of 4th-year biomedical Engineer students- Cairo University
 
 Nowadays immersive technologies have become an integrated part of various sectors including 
 entertainment, education, healthcare, and more. This technology is known as XR technology or Extended 
-Reality. In this paper we address the existing gap in practical experience for medical students in the field of 
+Reality. We address the existing gap in practical experience for medical students in the field of 
 endoscopy. The problem at hand revolves around the steep learning curve associated with gaining 
 proficiency in endoscopy, a crucial medical procedure for diagnosis and treatment. This project aims to 
 bridge the gap between theoretical knowledge and practical skills in endoscopy for medical students by 
