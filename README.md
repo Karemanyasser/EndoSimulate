@@ -15,5 +15,5 @@ Arthroscopy, Upper Endoscope, and Hysteroscopy).
 ## System Structure
 ![system](https://github.com/Naira06/EndoSimulate/assets/83358118/385777fc-e5ef-421a-9df5-12a48f6351a2)
 
-## Our FlowWork
+## Our WorkFlow
 ![workflow](https://github.com/Naira06/EndoSimulate/assets/83358118/ee63aa16-8d4f-4394-8c68-b3702851ce82)
