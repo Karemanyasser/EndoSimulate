@@ -9,11 +9,11 @@ bridge the gap between theoretical knowledge and practical skills in endoscopy f
 developing an immersive environment to train novices on three different kinds of endoscopes (Knee 
 Arthroscopy, Upper Endoscope, and Hysteroscopy).
 
-#You can find  The Assests and 3d Models of the project in this [Drive Link](https://drive.google.com/drive/folders/1AZm3lkGROScJXtD-8lsOgmC1ruUqbel9?usp=drive_link)
-#Our Demo [Demo Link](https://drive.google.com/file/d/1z4SfHKvxW0hHHwXELH8K7ajuyLfFD3Wc/view?usp=drive_link).
+# You can find  The Assests and 3d Models of the project in this [Drive Link](https://drive.google.com/drive/folders/1AZm3lkGROScJXtD-8lsOgmC1ruUqbel9?usp=drive_link)
+# Our Demo [Demo Link](https://drive.google.com/file/d/1z4SfHKvxW0hHHwXELH8K7ajuyLfFD3Wc/view?usp=drive_link).
 
-##System Structure
+## System Structure
 ![system](https://github.com/Naira06/EndoSimulate/assets/83358118/385777fc-e5ef-421a-9df5-12a48f6351a2)
 
-##Our FlowWork
+## Our FlowWork
 ![workflow](https://github.com/Naira06/EndoSimulate/assets/83358118/ee63aa16-8d4f-4394-8c68-b3702851ce82)
