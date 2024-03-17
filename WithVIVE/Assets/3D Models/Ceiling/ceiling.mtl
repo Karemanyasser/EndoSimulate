@@ -1,0 +1,43 @@
+# Blender 3.6.1 MTL File: 'None'
+# www.blender.org
+
+newmtl Ground
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd D:/SBME/4th year/GP/Final 3d models/Room/Ground/Textures/Ground_albedo.jpeg
+map_Ns D:/SBME/4th year/GP/Final 3d models/Room/Ground/Textures/Ground_roughness.jpeg
+map_refl D:/SBME/4th year/GP/Final 3d models/Room/Ground/Textures/Ground_metallic.jpeg
+
+newmtl bulb
+Ns 848.719788
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.952714 0.894105
+Ks 0.500000 0.500000 0.500000
+Ke 1.000000 1.000000 1.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl metal
+Ns 791.679565
+Ka 1.000000 1.000000 1.000000
+Kd 0.410937 0.379702 0.322304
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl outer
+Ns 353.416229
+Ka 0.472441 0.472441 0.472441
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
