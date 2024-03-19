@@ -24,8 +24,8 @@ Please note that the project is still under development, [Our Demo](https://driv
 
 1. Installation
    Unity [Download](https://unity.com/download)
-
-   clone Endosimulate Repository
+   
+2. clone Endosimulate Repository
    ```
    git clone https://github.com/Naira06/EndoSimulate.git
    ```
