@@ -8,8 +8,8 @@ bridge the gap between theoretical knowledge and practical skills in endoscopy f
 developing an immersive environment to train novices on endoscopic procedures through three 
 modalities(Knee Arthroscopy, Upper Endoscope, and Hysteroscopy).
 
-## [Our Demo](https://drive.google.com/file/d/1z4SfHKvxW0hHHwXELH8K7ajuyLfFD3Wc/view?usp=drive_link).
-Please note that the project is still under development 
+## Demo 
+Please note that the project is still under development, [Our Demo](https://drive.google.com/file/d/1z4SfHKvxW0hHHwXELH8K7ajuyLfFD3Wc/view?usp=drive_link).
 
 ## The Assests and 3d Models 
 [Drive Link](https://drive.google.com/drive/folders/1AZm3lkGROScJXtD-8lsOgmC1ruUqbel9?usp=drive_link)
