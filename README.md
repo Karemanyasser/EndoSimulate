@@ -22,10 +22,9 @@ Please note that the project is still under development, [Our Demo](https://driv
 
 # Getting Started
 
-1. Installation
-   Unity [Download](https://unity.com/download)
-   
-2. clone Endosimulate Repository
+## Installation
+Unity [Download](https://unity.com/download)
+## clone Endosimulate Repository
    ```
    git clone https://github.com/Naira06/EndoSimulate.git
    ```
