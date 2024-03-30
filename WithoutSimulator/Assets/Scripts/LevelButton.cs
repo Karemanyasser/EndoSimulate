@@ -11,7 +11,7 @@ public class LevelButton : MonoBehaviour
     public Button quit; // define quit button. 
     public GameObject Panel;   // define levelpanel. 
 
-    public int sceneindex;
+    public int sceneindex;  // define scene index
 
     // Start is called before the first frame update
     void Start()

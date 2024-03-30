@@ -4,22 +4,23 @@ using UnityEngine.SceneManagement;
 
 public class CharacterHover : MonoBehaviour
 {
-    private bool isHovered = false;
-    private Quaternion startRotation;
-    public float rotationSpeed = 30f;
-
+    private bool isHovered = false; //This variable tracks whether the object is currently being hovered over with initial value equal false 
+    private Quaternion startRotation; // This variable stores the initial rotation of the object
+    public float rotationSpeed = 30f;   // defines rotation speed with initial value = 30.0
+    
+    // Start is called before the first frame update
     void Start()
     {
-        // Store the initial rotation
-        startRotation = transform.rotation;
+        startRotation = transform.rotation; // Store the initial rotation
     }
 
+    // Update is called once per frame
     void Update()
     {
         // Rotate the character when hovered over
         if (isHovered)
         {
-            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime); // Rotate the object around its up axis with a speed of rotationSpeed degrees per second
         }
         else
         {
@@ -28,23 +29,20 @@ public class CharacterHover : MonoBehaviour
         }
     }
 
-    public void OnPointerEnter()
+    public void OnPointerEnter() // Called when the mouse pointer enters the character
     {
-        // Called when the mouse pointer enters the character
-        isHovered = true;
+        isHovered = true; // Set isHovered to true to indicate that the object is now being hovered over
         
     }
 
-    public void OnPointerExit()
+    public void OnPointerExit()  // Called when the mouse pointer exits the character
     {
-        // Called when the mouse pointer exits the character
-        isHovered = false;
+        isHovered = false; // Set isHovered to false to indicate that the object is no longer being hovered over
         
     }
 
-    public void OnPointerClick()
+    public void OnPointerClick()      // Called when the object is clicked
     {
-        // Called when the object is clicked
-        SceneManager.LoadScene("StartScene"); 
+        SceneManager.LoadScene("StartScene"); // Load start scene
     }
 }

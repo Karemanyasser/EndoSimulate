@@ -11,10 +11,10 @@ public class ExitButton : MonoBehaviour
 
     public Button no; // define no button. 
 
-    public GameObject exitPanel; 
-    public int sceneindex;
+    public GameObject exitPanel; // define exit panel
+    public int sceneindex; //define scene index
 
-    void Start()
+    void Start() // Start is called before the first frame update
     {
         exit.onClick.AddListener(EXIT); // when we click on exit button ,execute 'exit function'.
         yes.onClick.AddListener(YES); // when we click on yes button ,execute 'YES function'.
@@ -27,7 +27,7 @@ public class ExitButton : MonoBehaviour
 
     void YES()
     {
-        SceneManager.LoadScene(sceneindex);  // exit. 
+        SceneManager.LoadScene(sceneindex);  // load exit scene. 
     }
 
      void NO()

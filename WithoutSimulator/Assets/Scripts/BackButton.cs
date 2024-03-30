@@ -4,12 +4,13 @@ using UnityEngine.SceneManagement;
 public class Back : MonoBehaviour
 {
    
-    public Button button1; // define back button. 
-    public int sceneindex;
-
+    public Button Back_button; // define back button. 
+    public int sceneindex;  // define scene index
+    
+    // Start is called before the first frame update
     void Start()
     {
-        button1.onClick.AddListener(BackButton); // when we click on button ,execute 'BackButton function'.
+        Back_button.onClick.AddListener(BackButton); // when we click on button ,execute 'BackButton function'.
     }
 
     void BackButton()

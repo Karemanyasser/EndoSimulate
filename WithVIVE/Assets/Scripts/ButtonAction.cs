@@ -9,12 +9,12 @@ using UnityEngine.SceneManagement;
 
 public class ButtonAction : MonoBehaviour ,IColliderEventHoverEnterHandler
 {
-    public int sceneindex;
+    public int sceneindex; // define scene index
 
     public void OnColliderEventHoverEnter(ColliderHoverEventData eventData)
     {
         for(int i = 0; i < 10; i++);
-        SceneManager.LoadScene(sceneindex);
+        SceneManager.LoadScene(sceneindex);  // load scene of scene index
     }
 
 }

@@ -5,13 +5,13 @@ using UnityEngine.EventSystems;
 public class Levels : MonoBehaviour
 {
     public Button levelup; // define button. 
-    public Button leveldown; 
-    public Button level1; 
-    public Button level2; 
-    public Button level3; 
-    public Button level4; 
+    public Button leveldown; // define leveldown button.
+    public Button level1; // define level1 button.
+    public Button level2; // define level2 button.
+    public Button level3; // define level3 button.
+    public Button level4; // define level4 button.
 
-    public int currentLevel = 1;
+    public int currentLevel = 1; // This variable stores the current level of the game, starting from level 1
 
     // Start is called before the first frame update
     void Start()
@@ -23,24 +23,27 @@ public class Levels : MonoBehaviour
 
     void LevelUp()
     {
+        // Increases the current level by 1 and activates the button for the new level if the current level is less than 4
         if (currentLevel < 4)
         {
-            currentLevel++;
-            ActivateCurrentLevelButton();
+            currentLevel++;//Increases the current level by 1
+            ActivateCurrentLevelButton();//Activates the button for the new level
         }
     }
 
     void LevelDown()
     {
+        // decreases the current level by 1 and activates the button for the new level if the current level is more than 1
         if (currentLevel > 1)
         {
-            currentLevel--;
-            ActivateCurrentLevelButton();
+            currentLevel--;//decreases the current level by 1
+            ActivateCurrentLevelButton();//Activates the button for the new level
         }
     }
 
     void ActivateCurrentLevelButton()
     {
+        // Activates the button for the current level and adjusts the visibility of other level buttons
         switch (currentLevel)
         {
             case 1:
@@ -78,11 +81,11 @@ public class Levels : MonoBehaviour
 
     void ActivateLevelButton(Button button)
     {
-        button.gameObject.SetActive(true);
+        button.gameObject.SetActive(true); // Set the game object associated with the button to active, making it visible and interactable
     }
 
     void DeactivateLevelButton(Button button)
     {
-        button.gameObject.SetActive (false);
+        button.gameObject.SetActive (false);// Set the game object associated with the button to inactive, making it invisible and non-interactable
     }
 }

@@ -5,9 +5,9 @@ public class Back : MonoBehaviour
 {
    
     public Button button1; // define back button. 
-    public int sceneindex;
+    public int sceneindex; // define scene index
 
-    void Start()
+    void Start() // Start is called before the first frame update
     {
         button1.onClick.AddListener(BackButton); // when we click on button ,execute 'BackButton function'.
     }
