@@ -12,7 +12,7 @@ modalities(Knee Arthroscopy, Upper Endoscope, and Hysteroscopy).
 Please note that the project is still under development, [Our Demo](https://drive.google.com/file/d/1z4SfHKvxW0hHHwXELH8K7ajuyLfFD3Wc/view?usp=drive_link).
 
 ## The Assests and 3d Models 
-[Drive Link](https://drive.google.com/drive/folders/1AZm3lkGROScJXtD-8lsOgmC1ruUqbel9?usp=drive_link)
+[Drive Link](https://drive.google.com/drive/folders/161euVUHp4bblDOCB7QliO0fMFc7uVeOm?usp=sharing)
 
 ## System Structure
 ![system](https://github.com/Naira06/EndoSimulate/assets/83358118/385777fc-e5ef-421a-9df5-12a48f6351a2)
