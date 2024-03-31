@@ -9,7 +9,7 @@ developing an immersive environment to train novices on endoscopic procedures th
 modalities(Knee Arthroscopy, Upper Endoscope, and Hysteroscopy).
 
 ## Demo 
-Please note that the project is still under development, [Our Demo](https://drive.google.com/file/d/1z4SfHKvxW0hHHwXELH8K7ajuyLfFD3Wc/view?usp=drive_link).
+Please note that the project is still under development, [Our Demo](https://drive.google.com/drive/folders/1nkX2kh4fTo1xBMMGhj5C7JvjUQ_ExHK9?usp=sharing).
 
 ## The Assests and 3d Models 
 [Drive Link](https://drive.google.com/drive/folders/161euVUHp4bblDOCB7QliO0fMFc7uVeOm?usp=sharing)
@@ -28,7 +28,7 @@ Unity [Download](https://unity.com/download)
    ```
    git clone https://github.com/Naira06/EndoSimulate.git
    ```
-   Now, you will need open Unity Hub and simply create a new Unity project by adding our project. Then, simply open the Unity by clicking on the project you just added. Please note that we have tested the environment on Unity Version 2022.3.20f1.
+   Now, you will need to open Unity Hub and simply create a new Unity project by adding our project. Then, simply open Unity by clicking on the project you just added. Please note that we have tested the environment on Unity Version 2022.3.20f1.
 
 <table>
     <tbody>
