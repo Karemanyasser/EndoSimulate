@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HTC.UnityPlugin.ColliderEvent;
-using HTC.UnityPlugin.Utility;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class PanelShow : MonoBehaviour ,IColliderEventHoverEnterHandler
+public class PanelShow : MonoBehaviour 
 {
     public GameObject Panel;   // define levelpanel. 
+    private bool isHovered = false;
 
-    public void OnColliderEventHoverEnter(ColliderHoverEventData eventData)
+    void Update()
     {
-        for(int i = 0; i < 10; i++);
-        Panel.SetActive(true);  //activate panel.
+        if (isHovered)
+        {
+            for(int i = 0; i < 5; i++);
+            Panel.SetActive(true);  //activate panel.
+        }
+    }
+
+    public void OnPointerEnter()           // Called when the hand pointer enters the object
+    {
+        isHovered = true;
+    }
+
+    public void OnPointerExit()              // Called when the hand pointer exits the object
+    {
+        isHovered = false;
     }
 
 }

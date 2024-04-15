@@ -7,15 +7,30 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class PanelHide : MonoBehaviour ,IColliderEventHoverEnterHandler
+public class PanelHide : MonoBehaviour 
 {
     public GameObject Panel;   // define levelpanel. 
+    private bool isHovered = false;
 
-    public void OnColliderEventHoverEnter(ColliderHoverEventData eventData)
+    void Update()
     {
-        for(int i = 0; i < 10; i++);
-        Panel.SetActive(false);  //deactivate panel.
+        if (isHovered)
+        {
+            for(int i = 0; i < 5; i++);
+            Panel.SetActive(false);  //activate panel.
+        }
     }
+
+    public void OnPointerEnter()           // Called when the hand pointer enters the object
+    {
+        isHovered = true;
+    }
+
+    public void OnPointerExit()              // Called when the hand pointer exits the object
+    {
+        isHovered = false;
+    }
+
 
 }
 

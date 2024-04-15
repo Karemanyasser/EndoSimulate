@@ -1,22 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using HTC.UnityPlugin.ColliderEvent;
-using HTC.UnityPlugin.Utility;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-
-public class ButtonAction : MonoBehaviour ,IColliderEventHoverEnterHandler
+public class ButtonAction : MonoBehaviour
 {
-    public int sceneindex; // define scene index
 
-    public void OnColliderEventHoverEnter(ColliderHoverEventData eventData)
+    public int sceneindex;
+    private bool isHovered = false;
+
+    void Update()
     {
-        for(int i = 0; i < 10; i++);
-        SceneManager.LoadScene(sceneindex);  // load scene of scene index
+        if (isHovered)
+        {
+            for(int i = 0; i < 5; i++);
+            SceneManager.LoadScene(sceneindex);
+        }
     }
 
+    public void OnPointerEnter()           // Called when the hand pointer enters the object
+    {
+        isHovered = true;
+    }
+
+    public void OnPointerExit()              // Called when the hand pointer exits the object
+    {
+        isHovered = false;
+    }
 }
-
-
