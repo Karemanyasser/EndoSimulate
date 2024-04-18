@@ -22,7 +22,7 @@ public class Forward : MonoBehaviour
     {
         if (isHovered)
         {
-            for(int i = 0; i < 5; i++);
+            for(int i = 0; i < 15; i++);
             LevelUp();
             
         }

@@ -1,0 +1,38 @@
+# Blender MTL File: 'untitled.blend1'
+# Material Count: 3
+
+newmtl Material.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\smsm\\OneDrive\\Desktop\\graduation project\\3D Models\\Patient-GIT\\textures\\Patient_Packed0_BaseColor.png
+refl C:\\Users\\smsm\\OneDrive\\Desktop\\graduation project\\3D Models\\Patient-GIT\\textures\\Patient_Packed0_Metallic.png
+
+newmtl Material.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\smsm\\OneDrive\\Desktop\\graduation project\\3D Models\\Knee\\Material\\Knee joint Normal.png
+map_Kd C:\\Users\\smsm\\OneDrive\\Desktop\\graduation project\\3D Models\\Knee\\Material\\Knee joint BaseColor.png
+map_Ns C:\\Users\\smsm\\OneDrive\\Desktop\\graduation project\\3D Models\\Knee\\Material\\Knee joint Roughness.png
+refl C:\\Users\\smsm\\OneDrive\\Desktop\\graduation project\\3D Models\\Knee\\Material\\Knee joint Metallic.png
+
+newmtl cover
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.093064 0.207276 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2

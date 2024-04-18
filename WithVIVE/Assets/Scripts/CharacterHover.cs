@@ -22,9 +22,10 @@ public class CharacterHover : MonoBehaviour
         if (isHovered)
         {
             
-            for(int i = 0; i < 10; i++){
+            for(int i = 0; i < 15; i++){
                 transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
             }
+            
             SceneManager.LoadScene("StartScene");
         }
         else

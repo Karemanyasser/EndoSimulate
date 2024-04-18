@@ -16,7 +16,7 @@ public class PanelHide : MonoBehaviour
     {
         if (isHovered)
         {
-            for(int i = 0; i < 5; i++);
+            for(int i = 0; i < 15; i++);
             Panel.SetActive(false);  //activate panel.
         }
     }

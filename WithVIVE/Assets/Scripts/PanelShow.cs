@@ -14,7 +14,7 @@ public class PanelShow : MonoBehaviour
     {
         if (isHovered)
         {
-            for(int i = 0; i < 5; i++);
+            for(int i = 0; i < 15; i++);
             Panel.SetActive(true);  //activate panel.
         }
     }
