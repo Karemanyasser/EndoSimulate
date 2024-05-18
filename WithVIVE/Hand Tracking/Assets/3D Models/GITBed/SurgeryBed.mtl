@@ -1,0 +1,38 @@
+# Blender 3.6.1 MTL File: 'endo.blend'
+# www.blender.org
+
+newmtl Construction
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Construction_BaseColor.png
+map_Ns C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Construction_Roughness.png
+map_refl C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Construction_Metallic.png
+map_Bump -bm 1.000000 C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Construction_Normal.png
+
+newmtl Matres
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Matres_BaseColor.png
+map_Ns C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Matres_Roughness.png
+map_refl C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Matres_Metallic.png
+map_Bump -bm 1.000000 C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Matres_Normal.png
+
+newmtl Spring
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Spring_BaseColor.png
+map_Ns C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Spring_Roughness.png
+map_refl C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Spring_Metallic.png
+map_Bump -bm 1.000000 C:/Users/sweet/Downloads/models/room needs blend/texture/SurgeryBed_Spring_Normal.png

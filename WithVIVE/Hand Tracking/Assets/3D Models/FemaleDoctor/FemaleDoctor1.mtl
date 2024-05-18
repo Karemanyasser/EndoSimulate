@@ -1,0 +1,13 @@
+# Blender 3.6.1 MTL File: 'fempatient.blend'
+# www.blender.org
+
+newmtl Material.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/sweet/Downloads/Surgical_Female_Doctor_in_Blue_Uniform_Working_221_-_3D_Model/Surgical Female Doctor in Blue Uniform Working 221 - 3D Model/0_043F_01SET_27SHOT_DIFFUSE.jpeg
+map_Ks C:/Users/sweet/Downloads/Surgical_Female_Doctor_in_Blue_Uniform_Working_221_-_3D_Model/Surgical Female Doctor in Blue Uniform Working 221 - 3D Model/0_043F_01SET_27SHOT_SPECULAR.jpeg
+map_Bump -bm 1.000000 C:/Users/sweet/Downloads/Surgical_Female_Doctor_in_Blue_Uniform_Working_221_-_3D_Model/Surgical Female Doctor in Blue Uniform Working 221 - 3D Model/0_043F_01SET_27SHOT_NORMAL.jpeg
