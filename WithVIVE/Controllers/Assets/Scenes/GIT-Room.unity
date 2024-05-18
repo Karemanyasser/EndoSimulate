@@ -199,12 +199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c840f2d9fcc3dc4ea5179b6cc59b898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spline: {fileID: 22599096}
-  inputreader: {fileID: 71693088}
-  speed: 1
-  targetObject: {fileID: 567621334}
-  collisionDistance: 2.5
-  sphere: {fileID: 1331748911}
 --- !u!114 &22599096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,23 +315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4890a3138ed7a74ea5d67b99d4ec6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Finput:
-    m_Name: Finput
-    m_Type: 0
-    m_ExpectedControlType: Vector2
-    m_Id: 03fc9978-c4b5-446f-891c-4affebcdfd2d
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 109e1418-94c0-403a-8e94-f1e458d5f90a
-      m_Path: <Mouse>/scroll
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Finput
-      m_Flags: 0
-    m_Flags: 0
 --- !u!4 &71693089
 Transform:
   m_ObjectHideFlags: 0
@@ -573,30 +550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71feb8437a2dca348bfbb9aeb333f2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Trigger
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: dc55a9c0-2b86-4ca1-83d7-5282e4603599
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  gripAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Grip
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 27973c59-ee9f-435b-8895-bb0821624a8d
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &407045911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3deef6a20b517041b3106721d4d47cc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.21
+      value: -32.96
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3deef6a20b517041b3106721d4d47cc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -813,7 +766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: d3deef6a20b517041b3106721d4d47cc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.002
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: d3deef6a20b517041b3106721d4d47cc, type: 3}
       propertyPath: m_Name
@@ -876,7 +829,7 @@ Animator:
   m_GameObject: {fileID: 440188415}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 81d59fd78fa8ad14e87842124d6793f0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8b8068ebaf234cb46a66fa9258ebea7e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1401,11 +1354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35658c3335ca3ad439149e28f9eace1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exit: {fileID: 552711734}
-  yes: {fileID: 1658207947}
-  no: {fileID: 1021987607}
-  exitPanel: {fileID: 1574579141}
-  sceneindex: 1
 --- !u!1 &559153176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,30 +2022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71feb8437a2dca348bfbb9aeb333f2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Trigger
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: dc55a9c0-2b86-4ca1-83d7-5282e4603599
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  gripAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Grip
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 27973c59-ee9f-435b-8895-bb0821624a8d
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &675245383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6225,7 +6149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0495}
+  m_AnchoredPosition: {x: 0, y: 0.047}
   m_SizeDelta: {x: 0.09, y: 0.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711153184
