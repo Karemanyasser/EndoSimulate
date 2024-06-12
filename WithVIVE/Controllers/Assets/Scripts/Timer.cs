@@ -11,19 +11,18 @@ public class Timer : MonoBehaviour
   
     public static float currentTime; // Current time left in the game .
 
-    public AudioSource audioSource; //AudioSource:A representation of audio sources in 3D.
-
-    public AudioClip warning; //AudioClip: A container for audio data.
-
-    public AudioClip lose; //AudioClip: A container for audio data.
-
+    public AudioSource audioSource; // Audio source component.
+    public AudioClip timeFinishClip; // Audio clip to play when time finishes.
+    public AudioClip warningClip; // Audio clip to play when time is less than 20 seconds.
+    public bool warningPlayed = false;
+  
     // Start is called before the first frame update
     void Start()
     {
         timerText = GetComponent<TextMeshProUGUI>();  //Fetch the Text from the GameObject.
         currentTime = gameTime;        // Current time equal Total game time.
 
-        GetComponent<AudioSource>().Play(); //Fetch the AudioSource from the GameObject and play audio.
+       gameoverPanel.SetActive(false); // Ensure the gameover panel is initially inactive
 
     }
 
@@ -33,21 +32,27 @@ public class Timer : MonoBehaviour
         currentTime -= Time.deltaTime;  // decrease a timer value based on the elapsed time since the last frame.
         Updatetimer();  // call update time function .
 
-          if ( showlevel2.show == true  )
+          if ( showlevel2.show == true  ){
             timerText.text = string.Format("{0:00}:{1:00}", 0, 0);   //stop timer when passing
+          }
+            if ( SplineCustomMovement.showpanel == true  ){
+            timerText.text = string.Format("{0:00}:{1:00}", 0, 0);   //stop timer when passing
+            }
 
-        if (currentTime <=  20){
-            audioSource.clip = warning; //determines the audio clip that will be played next.
-		    audioSource.Play();  //Play the audio you attach to the AudioSource component.
-        }
-
-        if (currentTime <= 0)   // if time end,we will do the following.
+        if (currentTime <= 0) // If time ends, do the following.
         {
-            timerText.text = string.Format("{0:00}:{1:00}", 0, 0); // represent current time equal zero.
+            timerText.text = string.Format("{0:00}:{1:00}", 0, 0); // Represent current time equal zero.
+            gameoverPanel.SetActive(true); // Activate gameover panel.
 
-            gameoverPanel.SetActive(true); // activate gameover panel.
-            audioSource.clip = lose; //determines the audio clip that will be played next.
-		    audioSource.Play();  //Play the audio you attach to the AudioSource component.
+            if (!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(timeFinishClip); // Play the time finish audio clip.
+            }
+        }
+        else if (currentTime <= 20 && !warningPlayed) // If time is less than 20 seconds and warning hasn't been played.
+        {
+            audioSource.PlayOneShot(warningClip); // Play the warning audio clip.
+            warningPlayed = true; // Set the warning played flag to true.
         }
 
 
@@ -64,6 +69,7 @@ public class Timer : MonoBehaviour
     {
         currentTime = gameTime; //return to value of game Time.
         gameoverPanel.SetActive(false);  //deactivate gameover panel.
+         warningPlayed = false;
     
     } 
 }

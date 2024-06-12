@@ -10,40 +10,24 @@ public class SplineCustomMovement : MonoBehaviour
     public float speed = 1f;
     public Transform targetObject;
     public float collisionDistance = 2.5f;
+    public GameObject infoPanel; // Reference to the info panel
     public Transform sphere; 
-
-    // float distancePercentage = 0f;
-    // // float splineLength;
+    public static bool  showpanel = false;
+   
     bool isMoving = false;
 
-    // private void Start()
-    // {
-    //     splineLength = spline.CalculateLength();
-    // }
-
+    
     // Update is called once per frame
     void Update()
     {
        
         if (isMoving)
         {
-        //     // distancePercentage += speed * Time.deltaTime / splineLength;
-
-            // Vector3 currentPosition = spline.EvaluatePosition(distancePercentage);
-            // hysteroscopeCamera.transform.position = currentPosition;
-
-            // if (distancePercentage > 1f)
-            // {
-            //     distancePercentage = 0f;
-            // }
-
-            // Vector3 nextPosition = spline.EvaluatePosition(distancePercentage + 0.05f);
-            // Vector3 direction = nextPosition - currentPosition;
-            // hysteroscopeCamera.transform.rotation = Quaternion.LookRotation(direction, transform.up);
+        
             Debug.Log("TRUE!");
 
 
-            Mathf.Clamp(spline.ElapsedTime,0.0009808332f, 0.04081119f);
+            spline.ElapsedTime=Mathf.Clamp(spline.ElapsedTime,0.0009808332f, 0.04081119f);
            if(inputreader.forward > 0.008f && spline.ElapsedTime < 0.04081119f ){
             spline.ElapsedTime += speed * Time.deltaTime;
         }
@@ -51,6 +35,11 @@ public class SplineCustomMovement : MonoBehaviour
         if( inputreader.forward <  -0.008f && spline.ElapsedTime > 0.0009808332f){
             spline.ElapsedTime -= speed * Time.deltaTime;
         }
+        // Check if ElapsedTime equals 0.23600f and show the panel
+            if (spline.ElapsedTime>0.03957449f)
+            {
+                ShowPanel();
+            }
         }else{
             CheckCollision();
         }
@@ -66,6 +55,19 @@ public class SplineCustomMovement : MonoBehaviour
 
             // Perform any additional actions when collision occurs
             // You can add code here to trigger any desired behavior
+        }
+    }
+    void ShowPanel()
+    {
+        if (infoPanel != null)
+        {
+            infoPanel.SetActive(true);  // Activate panel
+            showpanel = true; 
+            Debug.Log("Panel shown due to spline.ElapsedTime reaching 0.23600f.");
+        }
+        else
+        {
+            Debug.LogWarning("Info panel is not assigned.");
         }
     }}
 
