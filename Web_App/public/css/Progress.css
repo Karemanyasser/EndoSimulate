@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(115deg, #fff 10%, #392F6E 40%,#0B0433 50%);
+
+}
+.container2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+.user-card, .history-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.user-card h2,  .history-card h2 {
+    margin-top: 0;
+    color:#0B0433;
+}
+.user-card p, .user-card h5{
+    color:#392F6E;
+}
