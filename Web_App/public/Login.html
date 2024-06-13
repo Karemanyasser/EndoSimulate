@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Description">
-    <meta name="author" content="Author">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Description">
+<meta name="author" content="Author">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -17,23 +18,24 @@
 	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
-    <!-- Webpage Title -->
-    <title>Login | EndoSimulate</title>
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/LogIn2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	
-	<!-- Favicon  -->
-    <link rel="icon" href="images/browser-Icon.png">
+  <!-- Webpage Title -->
+  <title>Login | EndoSimulate</title>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/fontawesome-all.css" rel="stylesheet">
+  <link href="css/swiper.css" rel="stylesheet">
+<link href="css/magnific-popup.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/LogIn2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<!-- Favicon  -->
+  <link rel="icon" href="images/browser-Icon.png">
+
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     <audio id="myAudio"  loop>
@@ -101,8 +103,6 @@
           
           const Username = document.getElementById("Username").value;
           const Password = document.getElementById("Password").value;
-
-
           
           const data = {
             Username,
@@ -121,7 +121,7 @@
             const result = await response.json();
             
             if (response.ok) {
-              sessionStorage.setItem("Username",Username)
+              sessionStorage.setItem("Username",Username);
               alert(result.message); // Show success message
               window.location.href = "Progress.html"; // Redirect after successful login
             } else {

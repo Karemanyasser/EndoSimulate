@@ -132,7 +132,9 @@ function updatePassByusername(req, res) {
 
 //===============================================================================================
 function getUser(req, res) {
-  const { Username } = req.body;
+  const  Username  = req.params.username;
+
+  console.log("Username: " ,Username);
 
   // Check if Username exists
   const checkUserQuery = `SELECT * FROM user WHERE Username = ?`;
@@ -149,11 +151,9 @@ function getUser(req, res) {
       res.status(400).json({ error: "Invalid Username" });
       return;
     }
-
     const user = userResult[0];
 
-
-    // Send back the UserID along with the message
+    // Send back the result along with the message
     res.status(200).json(user);
   });
 }
