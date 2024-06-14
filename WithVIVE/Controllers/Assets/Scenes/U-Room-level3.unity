@@ -3788,6 +3788,7 @@ MonoBehaviour:
   speed: 1
   targetObject: {fileID: 1089914424}
   collisionDistance: 1
+  infoPanel: {fileID: 0}
   sphere: {fileID: 798261002}
 --- !u!114 &1010907043
 MonoBehaviour:
@@ -3917,8 +3918,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 0cc4bb043b85a2c40ba0865b96b95a6c, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5240,8 +5241,9 @@ MonoBehaviour:
   timerText: {fileID: 1291740846}
   gameoverPanel: {fileID: 2132552186}
   audioSource: {fileID: 1018794758}
-  warning: {fileID: 8300000, guid: 95b86b7953d8dda45af08273852d8362, type: 3}
-  lose: {fileID: 8300000, guid: 934e7ad746d88cf41afc3846e707b4a4, type: 3}
+  timeFinishClip: {fileID: 0}
+  warningClip: {fileID: 0}
+  warningPlayed: 0
 --- !u!82 &1291740849
 AudioSource:
   m_ObjectHideFlags: 0

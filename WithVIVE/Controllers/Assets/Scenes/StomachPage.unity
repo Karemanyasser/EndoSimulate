@@ -1721,9 +1721,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 781630661673262138, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 764391874}
-    - targetCorrespondingSourceObject: {fileID: 781630661673262138, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 764391875}
   m_SourcePrefab: {fileID: 100100000, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
 --- !u!224 &764391869 stripped
 RectTransform:
@@ -1772,25 +1769,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &764391875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764391872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83028c50d82798347badbf65f1968458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forwardButton: {fileID: 764391871}
-  backwardButton: {fileID: 1791751152}
-  level1: {fileID: 1622400262}
-  level2: {fileID: 906799398}
-  level3: {fileID: 796142252}
-  level4: {fileID: 1743693648}
-  currentLevel: 1
 --- !u!1001 &796142249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4207,6 +4185,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5289182684458692540, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1622400263}
+    - targetCorrespondingSourceObject: {fileID: 5289182684458692540, guid: e5db301629853dd4a99835fa70099d79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1622400264}
   m_SourcePrefab: {fileID: 100100000, guid: e5db301629853dd4a99835fa70099d79, type: 3}
 --- !u!224 &1622400260 stripped
 RectTransform:
@@ -4243,6 +4224,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 1044787704}
   button1: {fileID: 1622400262}
+--- !u!114 &1622400264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622400261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b98de43302751944a243d0319c4b8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardButton: {fileID: 764391871}
+  backwardButton: {fileID: 1791751152}
+  level1: {fileID: 1622400262}
+  level2: {fileID: 906799398}
+  level3: {fileID: 796142252}
+  level4: {fileID: 1743693648}
+  currentLevel: 1
 --- !u!1001 &1652143810
 PrefabInstance:
   m_ObjectHideFlags: 0

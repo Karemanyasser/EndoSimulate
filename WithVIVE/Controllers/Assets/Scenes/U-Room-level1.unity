@@ -1131,7 +1131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.016545422, y: 0, z: 0.06137517, w: 0}
+  m_margin: {x: 0.016545422, y: 0, z: 0.04458876, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2366,8 +2366,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1247, y: 0.1394}
-  m_SizeDelta: {x: 0.0946, y: 0.0807}
+  m_AnchoredPosition: {x: -0.1339, y: 0.1432}
+  m_SizeDelta: {x: 0.0761, y: 0.073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &655351937
 MonoBehaviour:
@@ -4594,7 +4594,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0cc4bb043b85a2c40ba0865b96b95a6c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4790,7 +4790,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1462, y: -0.022}
+  m_AnchoredPosition: {x: 0.121, y: -0.022}
   m_SizeDelta: {x: 0.01592, y: 0.0135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1029218570
@@ -5605,7 +5605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0448, y: -0.056}
+  m_AnchoredPosition: {x: -0.095, y: -0.056}
   m_SizeDelta: {x: 0.04334, y: 0.0581}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274506228
@@ -5856,7 +5856,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.12885699, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9580,7 +9580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.3353, y: 0.2688}
+  m_AnchoredPosition: {x: 0.335, y: 0.246}
   m_SizeDelta: {x: 0.2849, y: 0.1384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874205506
