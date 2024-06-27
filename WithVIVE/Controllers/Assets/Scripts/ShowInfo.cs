@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace Valve.VR.InteractionSystem.Sample
+{
+
 public class ShowInfo : MonoBehaviour
 {
    public Button Show; // define button. 
@@ -42,4 +45,5 @@ public class ShowInfo : MonoBehaviour
             Debug.LogWarning("Target image is not set.");
         }
     }
+}
 }

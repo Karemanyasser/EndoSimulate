@@ -45,6 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/U-Room-level3.unity
     guid: 5f629a5609400c24494cc024ef75275d
   m_configObjects:
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 6f76e8fbebc424146a9b131f8b12ea36, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 77afe772906f13e44a92fba05bb99127, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: b1d769411f2e71143b15697616addd8b, type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 813176f52aab63848843aa33cec8af26, type: 2}
