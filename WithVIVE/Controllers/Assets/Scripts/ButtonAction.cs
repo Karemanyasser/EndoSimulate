@@ -2,16 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
 public class ButtonAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
 {
-    Color lightBlue = new Color(0.678f, 0.847f, 0.902f); // RGB values for light blue
+    Color lightPurple = new Color(0.808f, 0.663f, 0.831f); 
     
-   // public Color32 m_NormalColor = lightBlue;
-    public Color32 m_HoverColor = Color.blue; 
+    Color purple = new Color(0.753f, 0.329f, 0.698f);
 
     public int sceneIndex;
 
@@ -26,13 +24,13 @@ public class ButtonAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData eventData)           // Called when the hand pointer enters the object
     {
         Debug.Log("Enter");
-        m_Image.color = m_HoverColor;
+        m_Image.color = purple;
     }
 
     public void OnPointerExit(PointerEventData eventData)              // Called when the hand pointer exits the object
     {
         Debug.Log("Exit");
-        m_Image.color = lightBlue;
+        m_Image.color = lightPurple;
     }
 
      public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object

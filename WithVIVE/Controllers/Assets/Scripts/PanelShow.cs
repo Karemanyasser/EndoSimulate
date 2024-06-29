@@ -1,22 +1,51 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class PanelShow : MonoBehaviour 
+namespace Valve.VR.InteractionSystem.Sample
 {
-     public GameObject Panel;   // define levelpanel. 
+public class PanelShow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
+{
+    Color lightPurple = new Color(0.808f, 0.663f, 0.831f); 
+    
+    Color purple = new Color(0.753f, 0.329f, 0.698f);
 
-    public Button button1; // define button. 
+    public GameObject Panel;   // define panel. 
 
-      void Start()
+    private Image m_Image = null;
+
+    private void Awake()
     {
-        button1.onClick.AddListener(ButtonAction); // when we click on button ,execute 'ButtonAction function'.
+        m_Image = GetComponent<Image>();
     }
 
-    void ButtonAction()
+
+    public void OnPointerEnter(PointerEventData eventData)           // Called when the hand pointer enters the object
     {
+        Debug.Log("Enter");
+        m_Image.color = purple;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)              // Called when the hand pointer exits the object
+    {
+        Debug.Log("Exit");
+        m_Image.color = lightPurple;
+    }
+
+     public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object
+    {
+        Debug.Log("Click");
         Panel.SetActive(true);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)              // Called when the hand pointer Ups the object
+    {
+        Debug.Log("Up");
+    }
+
+    public void OnPointerDown(PointerEventData eventData)              // Called when the hand pointer Downs the object
+    {
+        Debug.Log("Down");
+    }
 }
-
 }
-
-

@@ -1,65 +1,54 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class CharacterHover : MonoBehaviour
+namespace Valve.VR.InteractionSystem.Sample
 {
-    private bool isHovered = false;
+public class CharacterHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
+{
     private Quaternion startRotation;
     public float rotationSpeed = 30f;
+
+     public int sceneIndex;
 
     void Start()
     {
         // Store the initial rotation
         startRotation = transform.rotation;
-
-        // Register XR interaction events
-        var interactable = GetComponent<XRGrabInteractable>();
-        if (interactable != null)
-        {
-            interactable.hoverEntered.AddListener(OnHoverEntered);
-            interactable.hoverExited.AddListener(OnHoverExited);
-            interactable.selectEntered.AddListener(OnSelectEntered);
-        }
     }
 
-    void Update()
-    {
-        // Rotate the character when hovered over
-        if (isHovered)
-        {
-            RotateCharacter();
-        }
-        else
-        {
-            // Reset the rotation to the initial rotation
-            transform.rotation = Quaternion.Lerp(transform.rotation, startRotation, Time.deltaTime * 5f);
-        }
-    }
 
    public void RotateCharacter()
     {
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
     }
 
-    public void OnHoverEntered(HoverEnterEventArgs args)
+    public void OnPointerEnter(PointerEventData eventData)           // Called when the hand pointer enters the object
     {
-        // Called when the XR controller hovers over the character
-        isHovered = true;
-        Debug.Log("Hover entered");
+        Debug.Log("Enter");
+        RotateCharacter();
     }
 
-    public void OnHoverExited(HoverExitEventArgs args)
+    public void OnPointerExit(PointerEventData eventData)              // Called when the hand pointer exits the object
     {
-        // Called when the XR controller stops hovering over the character
-        isHovered = false;
-        Debug.Log("Hover exited");
+        Debug.Log("Exit");
     }
 
-     public void OnSelectEntered(SelectEnterEventArgs args)
+     public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object
     {
-        // Load the scene when the character is selected (clicked)
-        Debug.Log("Character selected");
-        SceneManager.LoadScene(4);
-    }
+        Debug.Log("Click");
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)              // Called when the hand pointer Ups the object
+    {
+        Debug.Log("Up");
+    }
+
+    public void OnPointerDown(PointerEventData eventData)              // Called when the hand pointer Downs the object
+    {
+        Debug.Log("Down");
+    }
+
+}
 }

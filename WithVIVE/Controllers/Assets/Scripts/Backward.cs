@@ -1,15 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
-using System.Collections;
 
 
-
-public class Backward : MonoBehaviour 
+namespace Valve.VR.InteractionSystem.Sample
 {
-    private bool isHovered = false;
- 
+public class Backward : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
+{
     // define buttons
     public Button levelup; 
     public Button leveldown; 
@@ -20,19 +17,49 @@ public class Backward : MonoBehaviour
 
     public int currentLevel = 1;
 
-    void Update()
+    Color lightPurple = new Color(0.808f, 0.663f, 0.831f); 
+    
+    Color purple = new Color(0.753f, 0.329f, 0.698f);
+
+
+    private Image m_Image = null;
+
+
+    private void Awake()
     {
-        if (isHovered)
-        {
-            StartCoroutine(WaitAndLevelUp(5f));
-        }
+        m_Image = GetComponent<Image>();
     }
 
-    IEnumerator WaitAndLevelUp(float delay)
+
+    public void OnPointerEnter(PointerEventData eventData)           // Called when the hand pointer enters the object
     {
-        yield return new WaitForSeconds(delay);
-        LevelDown();
+        Debug.Log("Enter");
+        m_Image.color = purple;
     }
+
+    public void OnPointerExit(PointerEventData eventData)              // Called when the hand pointer exits the object
+    {
+        Debug.Log("Exit");
+        m_Image.color = lightPurple;
+    }
+
+     public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object
+    {
+        Debug.Log("Click");
+        LevelDown();
+
+    }
+
+    public void OnPointerUp(PointerEventData eventData)              // Called when the hand pointer Ups the object
+    {
+        Debug.Log("Up");
+    }
+
+    public void OnPointerDown(PointerEventData eventData)              // Called when the hand pointer Downs the object
+    {
+        Debug.Log("Down");
+    }
+
 
      void LevelDown()
     {
@@ -90,17 +117,5 @@ public class Backward : MonoBehaviour
         button.gameObject.SetActive (false);
     }
 
-    public void OnPointerEnter()           // Called when the hand pointer enters the object
-    {
-        isHovered = true;
-    }
-
-    public void OnPointerExit()              // Called when the hand pointer exits the object
-    {
-        isHovered = false;
-    }
-
-
 }
-
-
+}
