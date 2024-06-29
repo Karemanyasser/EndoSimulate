@@ -12,15 +12,15 @@ public class Playername : MonoBehaviour
         {
             playerDisplay.text = "Welcome: " + DBManager.FirstName + " " + DBManager.LastName;
             
-            // Check if the score is valid before displaying it.
-            // if (DBManager.score >= 0)
-            // {
-            //     scoreText.text = "Your Last Score: " + DBManager.score;
-            // }
-            // else
-            // {
-            //     scoreText.text = "Your Last Score: N/A";
-            // }
+            //Check if the score is valid before displaying it.
+            if (DBManager.score > 0)
+            {
+                scoreText.text = "Your Last Score: " + DBManager.score;
+            }
+            else
+            {
+                scoreText.text = "This is your first time in ENDOSIMULATE, no score for you saved yet";
+            }
         }
     }
 }

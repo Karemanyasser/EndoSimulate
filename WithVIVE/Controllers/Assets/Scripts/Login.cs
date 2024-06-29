@@ -4,141 +4,187 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class Login : MonoBehaviour
+namespace Valve.VR.InteractionSystem.Sample
 {
-    public InputField UserIDField;
-    public InputField passwordField;
-    public Button loginButton;
-
-    public GameObject panel;
-    public Text errorText;
-
-    public GameObject keypad;
-
-    private string currentInput = "";
-    private bool isPasswordField = false;
-
-    private void Start()
+    public class Login : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
-        loginButton.onClick.AddListener(() => StartCoroutine(UserLogin()));
-        VerifyInputs();
-    }
+        public InputField UserIDField;
+        public InputField passwordField;
+        public Button loginButton;
 
-    private IEnumerator UserLogin()
-    {
-        WWWForm form = new WWWForm();
-        form.AddField("UserID", UserIDField.text);
-        form.AddField("Password", passwordField.text);
+        public GameObject errorPanel;
+        public Text errorText;
+        public GameObject keypad;
 
-        using (WWW www = new WWW("http://localhost/sqlconnect/login.php", form))
+        private string currentInput = "";
+        private bool isPasswordField = false;
+
+        Color lightPurple = new Color(0.808f, 0.663f, 0.831f);
+        Color purple = new Color(0.753f, 0.329f, 0.698f);
+
+        private Image m_Image = null;
+
+        private void Awake()
         {
-            yield return www;
+            m_Image = GetComponent<Image>();
+        }
 
-            if (!string.IsNullOrEmpty(www.error))
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            Debug.Log("Enter");
+            m_Image.color = purple;
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            Debug.Log("Exit");
+            m_Image.color = lightPurple;
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            Debug.Log("Click");
+
+            if (eventData.pointerCurrentRaycast.gameObject == UserIDField.gameObject)
             {
-                HandleError("Connection error: " + www.error);
-                yield break;
+                OnUserIDFieldClick();
             }
-
-            string[] responseParts = www.text.Split('\t');
-
-            if (responseParts.Length >= 5 && responseParts[0] == "0")
+            else if (eventData.pointerCurrentRaycast.gameObject == passwordField.gameObject)
             {
-                DBManager.UserID = responseParts[1];
-                DBManager.FirstName = responseParts[2];
-                DBManager.LastName = responseParts[3];
-
-                if (int.TryParse(responseParts[4], out int score))
+                OnPasswordFieldClick();
+            }
+            else if (eventData.pointerCurrentRaycast.gameObject == loginButton.gameObject)
+            {
+                if (VerifyInputs())
                 {
-                    DBManager.score = score;
-                    SceneManager.LoadScene(2);
+                    StartCoroutine(UserLogin());
+                }
+            }
+            else if (eventData.pointerCurrentRaycast.gameObject.CompareTag("KeypadButton"))
+            {
+                string buttonValue = eventData.pointerCurrentRaycast.gameObject.GetComponentInChildren<Text>().text;
+                OnKeypadButtonClick(buttonValue);
+            }
+        }
+
+        private void Start()
+        {
+            loginButton.onClick.AddListener(() => StartCoroutine(UserLogin()));
+            VerifyInputs();
+        }
+
+        private IEnumerator UserLogin()
+        {
+            WWWForm form = new WWWForm();
+            form.AddField("UserID", UserIDField.text);
+            form.AddField("Password", passwordField.text);
+
+            using (WWW www = new WWW("http://localhost/sqlconnect/login.php", form))
+            {
+                yield return www;
+
+                if (!string.IsNullOrEmpty(www.error))
+                {
+                    HandleError("Connection error: " + www.error);
+                    yield break;
+                }
+
+                string[] responseParts = www.text.Split('\t');
+
+                if (responseParts.Length >= 5 && responseParts[0] == "0")
+                {
+                    DBManager.UserID = responseParts[1];
+                    DBManager.FirstName = responseParts[2];
+                    DBManager.LastName = responseParts[3];
+
+                    if (int.TryParse(responseParts[4], out int score))
+                    {
+                        DBManager.score = score;
+                        SceneManager.LoadScene(2);
+                    }
+                    else
+                    {
+                        Debug.Log("Failed to parse score.");
+                        HandleError("Failed to parse score.");
+                    }
                 }
                 else
                 {
-                    Debug.Log("Failed to parse score.");
-                    HandleError("Failed to parse score.");
+                    string errorMessage = "User login failed: ";
+                    if (responseParts.Length > 0)
+                    {
+                        errorMessage += responseParts[0];
+                    }
+                    else
+                    {
+                        errorMessage += "Unknown";
+                    }
+                    HandleError(errorMessage);
+                }
+            }
+        }
+
+        void HandleError(string message)
+        {
+            keypad.SetActive(false);
+            errorPanel.SetActive(true);
+            Debug.Log(message);
+            errorText.text = message;
+        }
+
+        public bool VerifyInputs()
+        {
+            return !string.IsNullOrEmpty(UserIDField.text) && passwordField.text.Length >= 5;
+        }
+
+        public void OnUserIDFieldClick()
+        {
+            currentInput = UserIDField.text;
+            isPasswordField = false;
+            keypad.SetActive(true);
+            errorPanel.SetActive(false);
+        }
+
+        public void OnPasswordFieldClick()
+        {
+            currentInput = passwordField.text;
+            isPasswordField = true;
+            keypad.SetActive(true);
+            errorPanel.SetActive(false);
+        }
+
+        public void OnKeypadButtonClick(string buttonValue)
+        {
+            if (buttonValue == "C")
+            {
+                currentInput = "";  // Clear all input
+            }
+            else if (buttonValue == "D")
+            {
+                if (currentInput.Length > 0)
+                {
+                    currentInput = currentInput.Substring(0, currentInput.Length - 1);  // Delete last input
                 }
             }
             else
             {
-                string errorMessage = "User login failed:  ";
-                if (responseParts.Length > 0)
-                {
-                    errorMessage += responseParts[0];
-                }
-                else
-                {
-                    errorMessage += "Unknown";
-                }
-                HandleError(errorMessage);
+                currentInput += buttonValue;
             }
+
+            UpdateInputField();
+            VerifyInputs();
         }
-    }
 
-    void HandleError(string message)
-    {
-        keypad.SetActive(false);
-        panel.SetActive(true);
-        Debug.Log(message);
-        errorText.text = message;
-    }
-
-    public void VerifyInputs()
-    {
-        loginButton.interactable = !string.IsNullOrEmpty(UserIDField.text) && (passwordField.text.Length >= 5);
-    }
-
-    public void OnUserIDFieldClick()
-    {
-        currentInput = UserIDField.text;
-        isPasswordField = false;
-        keypad.SetActive(true);
-        panel.SetActive(false);
-    }
-
-    public void OnPasswordFieldClick()
-    {
-        currentInput = passwordField.text;
-        isPasswordField = true;
-        keypad.SetActive(true);
-        panel.SetActive(false);
-    }
-
-    public void OnKeypadButtonClick(string buttonValue)
-    {
-    
-        if (buttonValue == "C")
+        private void UpdateInputField()
         {
-            if (currentInput.Length > 0)
+            if (isPasswordField)
             {
-                currentInput = "";  // Clear all input
+                passwordField.text = currentInput;
             }
-        }
-        else if (buttonValue == "D")  
-        {
-            if (currentInput.Length > 0)
+            else
             {
-                currentInput = currentInput.Substring(0, currentInput.Length - 1);   // Delete last input
+                UserIDField.text = currentInput;
             }
-        }
-        else
-        {
-            currentInput += buttonValue;
-        }
-
-        UpdateInputField();
-        VerifyInputs();
-    }
-
-    private void UpdateInputField()
-    {
-        if (isPasswordField)
-        {
-            passwordField.text = currentInput;
-        }
-        else
-        {
-            UserIDField.text = currentInput;
         }
     }
 }
