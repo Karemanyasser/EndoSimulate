@@ -30,13 +30,13 @@ public class Showchecklist : MonoBehaviour,IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData eventData)           // Called when the hand pointer enters the object
     {
         Debug.Log("Enter");
-        m_Image.color = blue;
+        m_Image.color = lightBlue;
     }
 
     public void OnPointerExit(PointerEventData eventData)              // Called when the hand pointer exits the object
     {
         Debug.Log("Exit");
-        m_Image.color = lightBlue;
+        m_Image.color = blue;
     }
 
      public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object
