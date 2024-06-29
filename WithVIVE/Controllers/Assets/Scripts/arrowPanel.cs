@@ -6,18 +6,18 @@ using UnityEngine.EventSystems;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-public class Showchecklist : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
-
+public class arrowPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
 {
     Color blue = new Color(0.0f, 0.0f, 1.0f); // Blue color 
     
     Color lightBlue = new Color(0.678f, 0.847f, 0.902f);
-    public Button Show; // define button. 
-    public GameObject infoPanel;
+    Color green= new Color(0.0f, 1.0f, 0.0f);
+
+    public GameObject Panel;   // define panel. 
     public GameObject hidearrow;
-    public GameObject showarrow1;
-    public GameObject showarrow2;
-    public GameObject showarrow3;
+    public Image targetImage; // Image component whose color will be changed
+
+
 
     private Image m_Image = null;
 
@@ -30,50 +30,43 @@ public class Showchecklist : MonoBehaviour,IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData eventData)           // Called when the hand pointer enters the object
     {
         Debug.Log("Enter");
-        m_Image.color = blue;
+        m_Image.color = lightBlue; 
     }
 
     public void OnPointerExit(PointerEventData eventData)              // Called when the hand pointer exits the object
     {
         Debug.Log("Exit");
-        m_Image.color = lightBlue;
+        m_Image.color = blue;
     }
 
      public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object
     {
         Debug.Log("Click");
-        SHOW();
-        SHOWarrow();
+        Panel.SetActive(true);
+        hidearrow.SetActive(false); //
+        ChangeColor();
+
     }
 
     public void OnPointerUp(PointerEventData eventData)              // Called when the hand pointer Ups the object
     {
         Debug.Log("Up");
     }
+
     public void OnPointerDown(PointerEventData eventData)              // Called when the hand pointer Downs the object
     {
         Debug.Log("Down");
     }
-
-    
-
-     void SHOW()
+    public void ChangeColor()
     {
-        
-        infoPanel.SetActive(true);  //activate panel.
-        hidearrow.SetActive(false); //
-        
-
+        if (targetImage != null)
+        {
+            targetImage.color = green;
+        }
+        else
+        {
+            Debug.LogWarning("Target image is not set.");
+        }
     }
-    void SHOWarrow()
-    {
-        showarrow1.SetActive(true);
-        showarrow2.SetActive(true); //
-        showarrow3.SetActive(true);
-        //
-        
-
-    }
-
-    
-}}
+}
+}
