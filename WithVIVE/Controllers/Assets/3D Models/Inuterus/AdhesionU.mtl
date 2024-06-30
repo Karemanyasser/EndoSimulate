@@ -1,0 +1,116 @@
+# Blender 3.6.1 MTL File: 'AdU1.blend'
+# www.blender.org
+
+newmtl Material.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Material.003
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Material.004
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Material.005
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Material.006
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Material.007
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Material.008
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Material.009
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Material.010
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/GP5/GP5/Assets/3D Models/Inuterus/Material/Map__389_Mix.png
+
+newmtl Ovary2
+Ns 95.999992
+Ka 1.000000 1.000000 1.000000
+Ks 0.423000 0.423000 0.423000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/sweet/Downloads/female-reproductive-organs-x-section/source/Uterus-XSection.zip/Map__389_Mix.png
+map_refl C:/Users/sweet/Downloads/female-reproductive-organs-x-section/source/Uterus-XSection.zip/Map__389_Mix.png
+map_Ke C:/Users/sweet/Downloads/female-reproductive-organs-x-section/source/Uterus-XSection.zip/Map__394_Falloff.png
+map_Bump C:/Users/sweet/Downloads/female-reproductive-organs-x-section/source/Uterus-XSection.zip/Map__576_Mix.png
+
+newmtl Uterus_XSection
+Ns 88.999977
+Ka 1.000000 1.000000 1.000000
+Ks 0.081000 0.081000 0.081000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/sweet/Downloads/female-reproductive-organs-x-section/source/Uterus-XSection.zip/UterusXSection_ALL.jpg
+map_refl C:/Users/sweet/Downloads/female-reproductive-organs-x-section/source/Uterus-XSection.zip/UterusXSection_Capillaries.tif
+map_Ke C:/Users/sweet/Downloads/female-reproductive-organs-x-section/source/Uterus-XSection.zip/Map__541_Falloff.png
+map_Bump C:/Users/sweet/Downloads/female-reproductive-organs-x-section/source/Uterus-XSection.zip/UterusXSection_BW.jpg
