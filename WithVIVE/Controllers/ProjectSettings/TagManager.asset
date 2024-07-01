@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hystroscope
+  - projectile
+  - FxTemporaire
+  - Normal
+  - Polyp
+  - Adhesion
   layers:
   - Default
   - TransparentFX
