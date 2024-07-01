@@ -5,9 +5,8 @@ using UnityEngine.EventSystems;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-public class Forward : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
+public class Forward : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler 
 {
- 
     // define buttons
     public Button levelup; 
     public Button leveldown; 
@@ -51,16 +50,7 @@ public class Forward : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
 
     }
 
-    public void OnPointerUp(PointerEventData eventData)              // Called when the hand pointer Ups the object
-    {
-        Debug.Log("Up");
-    }
-
-    public void OnPointerDown(PointerEventData eventData)              // Called when the hand pointer Downs the object
-    {
-        Debug.Log("Down");
-    }
-
+   
     void LevelUp()
     {
         if (currentLevel < 4)

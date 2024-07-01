@@ -16,7 +16,7 @@ public class QuizManager : MonoBehaviour
     {
         HideAllCases();
         ShowRandomCase();
-        SetButtonTags();
+        // SetButtonTags();
     }
 
     void HideAllCases()
@@ -41,20 +41,22 @@ public class QuizManager : MonoBehaviour
         {
             string tag = cases[i].tag;
             buttons[i].GetComponentInChildren<Text>().text = tag;
+            buttons[i].onClick.RemoveAllListeners();
             buttons[i].onClick.AddListener(() => OnButtonClicked(tag));
         }
     }
 
     void OnButtonClicked(string tag)
     {
+        Debug.Log("OnButtonClicked");
         if (tag == activeTag)
         {
-            Debug.Log("Correct!");
+            Debug.Log("Correct answer!");
             // Handle correct selection
         }
         else
         {
-            Debug.Log("Incorrect!");
+            Debug.Log("Incorrect answer ");
             // Handle incorrect selection
         }
 

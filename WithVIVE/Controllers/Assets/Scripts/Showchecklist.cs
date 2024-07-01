@@ -6,12 +6,15 @@ using UnityEngine.EventSystems;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-public class Showchecklist : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
+public class Showchecklist : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler 
 
 {
     Color blue = new Color(0.0f, 0.0f, 1.0f); // Blue color 
     
     Color lightBlue = new Color(0.678f, 0.847f, 0.902f);
+
+    
+    
     public Button Show; // define button. 
     public GameObject infoPanel;
     public GameObject hidearrow;
@@ -45,16 +48,6 @@ public class Showchecklist : MonoBehaviour,IPointerEnterHandler, IPointerExitHan
         SHOW();
         SHOWarrow();
     }
-
-    public void OnPointerUp(PointerEventData eventData)              // Called when the hand pointer Ups the object
-    {
-        Debug.Log("Up");
-    }
-    public void OnPointerDown(PointerEventData eventData)              // Called when the hand pointer Downs the object
-    {
-        Debug.Log("Down");
-    }
-
     
 
      void SHOW()
@@ -70,8 +63,7 @@ public class Showchecklist : MonoBehaviour,IPointerEnterHandler, IPointerExitHan
         showarrow1.SetActive(true);
         showarrow2.SetActive(true); //
         showarrow3.SetActive(true);
-        //
-        
+        // 
 
     }
 

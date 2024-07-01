@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-public class ButtonAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler 
+public class KeypadButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     Color lightPurple = new Color(0.808f, 0.663f, 0.831f); 
     
     Color purple = new Color(0.753f, 0.329f, 0.698f);
-
-    public int sceneIndex;
 
     private Image m_Image = null;
 
@@ -33,10 +31,5 @@ public class ButtonAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         m_Image.color = lightPurple;
     }
 
-     public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object
-    {
-        Debug.Log("Click");
-        SceneManager.LoadScene(sceneIndex);
-    }
 }
 }

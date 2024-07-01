@@ -1,37 +1,36 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-public class CharacterHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler 
+public class Like : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler 
 {
-    private Quaternion startRotation;
-    public float rotationSpeed = 30f;
+    Color lightGreen =new Color(0.564f, 0.933f, 0.564f); 
 
-     public int sceneIndex;
+    Color Green = new Color(0.0f, 1.0f, 0.0f);
 
-    void Start()
+    public int sceneIndex;
+
+    private Image m_Image = null;
+
+    private void Awake()
     {
-        // Store the initial rotation
-        startRotation = transform.rotation;
+        m_Image = GetComponent<Image>();
     }
 
-
-   public void RotateCharacter()
-    {
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
-    }
 
     public void OnPointerEnter(PointerEventData eventData)           // Called when the hand pointer enters the object
     {
         Debug.Log("Enter");
-        RotateCharacter();
+        m_Image.color = Green;
     }
 
     public void OnPointerExit(PointerEventData eventData)              // Called when the hand pointer exits the object
     {
         Debug.Log("Exit");
+        m_Image.color = lightGreen;
     }
 
      public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object
@@ -39,8 +38,5 @@ public class CharacterHover : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         Debug.Log("Click");
         SceneManager.LoadScene(sceneIndex);
     }
-
-   
-
 }
 }

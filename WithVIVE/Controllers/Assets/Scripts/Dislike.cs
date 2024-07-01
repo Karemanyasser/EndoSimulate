@@ -1,46 +1,43 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-public class CharacterHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler 
+public class Dislike : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    private Quaternion startRotation;
-    public float rotationSpeed = 30f;
+    Color lightRed = new Color(1.0f, 0.6f, 0.6f); 
+    
+    Color Red = new Color(1.0f, 0.0f, 0.0f);
 
-     public int sceneIndex;
+    public GameObject Panel;   // define panel. 
 
-    void Start()
+    private Image m_Image = null;
+
+    private void Awake()
     {
-        // Store the initial rotation
-        startRotation = transform.rotation;
+        m_Image = GetComponent<Image>();
     }
 
-
-   public void RotateCharacter()
-    {
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
-    }
 
     public void OnPointerEnter(PointerEventData eventData)           // Called when the hand pointer enters the object
     {
         Debug.Log("Enter");
-        RotateCharacter();
+        m_Image.color = Red;
     }
 
     public void OnPointerExit(PointerEventData eventData)              // Called when the hand pointer exits the object
     {
         Debug.Log("Exit");
+        m_Image.color = lightRed;
     }
 
      public void OnPointerClick(PointerEventData eventData)              // Called when the hand pointer click on  the object
     {
         Debug.Log("Click");
-        SceneManager.LoadScene(sceneIndex);
+        Panel.SetActive(false);
     }
 
-   
-
+    
 }
 }

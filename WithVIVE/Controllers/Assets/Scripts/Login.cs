@@ -38,6 +38,7 @@ namespace Valve.VR.InteractionSystem.Sample
         public void OnPointerExit(PointerEventData eventData)
         {
             Debug.Log("Exit");
+
             m_Image.color = lightPurple;
         }
 
@@ -45,26 +46,11 @@ namespace Valve.VR.InteractionSystem.Sample
         {
             Debug.Log("Click");
 
-            if (eventData.pointerCurrentRaycast.gameObject == UserIDField.gameObject)
-            {
-                OnUserIDFieldClick();
-            }
-            else if (eventData.pointerCurrentRaycast.gameObject == passwordField.gameObject)
-            {
-                OnPasswordFieldClick();
-            }
-            else if (eventData.pointerCurrentRaycast.gameObject == loginButton.gameObject)
-            {
-                if (VerifyInputs())
+             if (VerifyInputs())
                 {
                     StartCoroutine(UserLogin());
                 }
-            }
-            else if (eventData.pointerCurrentRaycast.gameObject.CompareTag("KeypadButton"))
-            {
-                string buttonValue = eventData.pointerCurrentRaycast.gameObject.GetComponentInChildren<Text>().text;
-                OnKeypadButtonClick(buttonValue);
-            }
+        
         }
 
         private void Start()
@@ -153,38 +139,6 @@ namespace Valve.VR.InteractionSystem.Sample
             errorPanel.SetActive(false);
         }
 
-        public void OnKeypadButtonClick(string buttonValue)
-        {
-            if (buttonValue == "C")
-            {
-                currentInput = "";  // Clear all input
-            }
-            else if (buttonValue == "D")
-            {
-                if (currentInput.Length > 0)
-                {
-                    currentInput = currentInput.Substring(0, currentInput.Length - 1);  // Delete last input
-                }
-            }
-            else
-            {
-                currentInput += buttonValue;
-            }
-
-            UpdateInputField();
-            VerifyInputs();
-        }
-
-        private void UpdateInputField()
-        {
-            if (isPasswordField)
-            {
-                passwordField.text = currentInput;
-            }
-            else
-            {
-                UserIDField.text = currentInput;
-            }
-        }
+       
     }
 }

@@ -1,8 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Keypad : MonoBehaviour
+namespace Valve.VR.InteractionSystem.Sample
 {
-    public GameObject button1, button2, button3, button4, button5, button6, button7, button8, button9, button0;
+    public class Keypad : MonoBehaviour 
+    {
+        private string userInput = "";
+        private string passwordInput = "";
+
+        public InputField UserIDField;
+        public InputField passwordField;
+
+        private bool isPasswordField = false;
+
+        public void OnKeypadButtonClick(string buttonValue)
+        {
+            if (buttonValue == "C")
+            {
+                isPasswordField = !isPasswordField;  // Toggle the flag
+            }
+            else if (buttonValue == "D")
+            {
+                if (isPasswordField)
+                {
+                    if (passwordInput.Length > 0)
+                    {
+                        passwordInput = passwordInput.Substring(0, passwordInput.Length - 1);  // Delete last input
+                    }
+                }
+                else
+                {
+                    if (userInput.Length > 0)
+                    {
+                        userInput = userInput.Substring(0, userInput.Length - 1);  // Delete last input
+                    }
+                }
+            }
+            else
+            {
+                if (isPasswordField)
+                {
+                    passwordInput += buttonValue;
+                }
+                else
+                {
+                    userInput += buttonValue;
+                }
+            }
+            
+            UpdateInputField();
+        }
+
+        private void UpdateInputField()
+        {
+            if (isPasswordField)
+            {
+                passwordField.text = passwordInput;
+            }
+            else
+            {
+                UserIDField.text = userInput;
+            }
+        }
+    }
 }

@@ -10,6 +10,9 @@ public class showlevel2 : MonoBehaviour
     public Image targetImage2;
     public Image targetImage3;
 
+    Color green= new Color(0.0f, 1.0f, 0.0f);
+
+
     public static bool  show = false;
 
     // Start is called before the first frame update
@@ -26,9 +29,9 @@ public class showlevel2 : MonoBehaviour
 
      void CheckImagesAndShowPanel()
     {
-        if ( targetImage1.color == Color.green &&
-             targetImage2.color == Color.green &&
-             targetImage3.color == Color.green)
+        if ( targetImage1.color == green &&
+             targetImage2.color == green &&
+             targetImage3.color == green)
         {
             infoPanel.SetActive(true);  // Activate panel
             show = true; 

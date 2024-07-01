@@ -10,6 +10,9 @@ TagManager:
   - Normal
   - Polyp
   - Adhesion
+  - KeypadButton
+  - UserID
+  - UserPass
   layers:
   - Default
   - TransparentFX

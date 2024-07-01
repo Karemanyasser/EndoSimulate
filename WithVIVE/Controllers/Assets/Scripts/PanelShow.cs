@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-public class PanelShow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler , IPointerUpHandler, IPointerDownHandler
+public class PanelShow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler 
 {
     Color lightPurple = new Color(0.808f, 0.663f, 0.831f); 
     
@@ -38,14 +38,5 @@ public class PanelShow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         Panel.SetActive(true);
     }
 
-    public void OnPointerUp(PointerEventData eventData)              // Called when the hand pointer Ups the object
-    {
-        Debug.Log("Up");
-    }
-
-    public void OnPointerDown(PointerEventData eventData)              // Called when the hand pointer Downs the object
-    {
-        Debug.Log("Down");
-    }
 }
 }
