@@ -27,14 +27,17 @@ public class Rotation : MonoBehaviour
         if ((eulerAngX >= 5 && eulerAngX <= 7) || (eulerAngY >= 115 && eulerAngY<=125))
         {
             Text555.text = "Correct position"; // Correct way to set the text
+            Text555.color = Color.green; // Set the text color to green
             print(Text555.text);
         }
         else if (!((eulerAngX >= 5 && eulerAngX <= 7) || (eulerAngY >= 115 && eulerAngY<=125)))
         {
-            Text555.text = " Wrong Postion"; // Clear the text if not in the right position
+            Text555.text = " Wrong Postion"; // text if not in the right position
+            Text555.color = Color.red; // Set the text color to red
         }
         else{
             Text555.text = ""; // Clear the text if not in the right position
+            Text555.color = Color.black; // Set the text color to black
         }
         
     }

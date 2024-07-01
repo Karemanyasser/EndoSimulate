@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuizManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class QuizManager : MonoBehaviour
 
     private GameObject activeCase;
     private string activeTag;
+
+    public TextMeshProUGUI Textanswer; // Text component to display the answer
 
     void Start()
     {
@@ -51,12 +54,17 @@ public class QuizManager : MonoBehaviour
         Debug.Log("OnButtonClicked");
         if (tag == activeTag)
         {
+
             Debug.Log("Correct answer!");
+            Textanswer.text = "Correct answer!"; // Correct way to set the text
+            Textanswer.color = Color.green; // Set the text color to green
             // Handle correct selection
         }
         else
         {
             Debug.Log("Incorrect answer ");
+            Textanswer.text = "Incorrect answer!"; // Correct way to set the text
+            Textanswer.color = Color.red; // Set the text color to red
             // Handle incorrect selection
         }
 

@@ -53,8 +53,7 @@ public class Character : MonoBehaviour
         Debug.Log("Hover exited");
     }
     
-     public void OnSelectEntered(SelectEnterEventArgs args)
-
+    public void OnSelectEntered(SelectEnterEventArgs args)
     {
         // Load the scene when the character is selected (clicked)
         Debug.Log("Character selected");

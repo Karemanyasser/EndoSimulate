@@ -1855,7 +1855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 686385407}
-  sceneindex: 11
+  sceneindex: 7
 --- !u!1 &455745665
 GameObject:
   m_ObjectHideFlags: 0
@@ -8434,7 +8434,6 @@ GameObject:
   - component: {fileID: 1291740847}
   - component: {fileID: 1291740846}
   - component: {fileID: 1291740848}
-  - component: {fileID: 1291740849}
   m_Layer: 5
   m_Name: time
   m_TagString: Untagged
@@ -8577,102 +8576,6 @@ MonoBehaviour:
   timeFinishClip: {fileID: 8300000, guid: 934e7ad746d88cf41afc3846e707b4a4, type: 3}
   warningClip: {fileID: 8300000, guid: 95b86b7953d8dda45af08273852d8362, type: 3}
   warningPlayed: 0
---- !u!82 &1291740849
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1291740843}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1297665884
 GameObject:
   m_ObjectHideFlags: 0
@@ -9179,7 +9082,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.015067633, y: 0.13191286, z: 0.013609107, w: 0.99105334}
   m_LocalPosition: {x: 0.0725, y: 0.3447, z: 0.3153}
-  m_LocalScale: {x: 22.371614, y: 16.173008, z: 206.44829}
+  m_LocalScale: {x: 38, y: 31, z: 206}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1141234414}
@@ -9355,7 +9258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Session is over!
+  m_text: "Session is Over! \nRestart      leave"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14823,7 +14726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1343631807}
-  sceneindex: 7
+  sceneindex: 11
 --- !u!1 &2100738135
 GameObject:
   m_ObjectHideFlags: 0
