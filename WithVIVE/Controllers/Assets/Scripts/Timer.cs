@@ -32,11 +32,13 @@ public class Timer : MonoBehaviour
         currentTime -= Time.deltaTime;  // decrease a timer value based on the elapsed time since the last frame.
         Updatetimer();  // call update time function .
 
-          if ( showlevel2.show == true  ){
+          if ( showlevel2.show == true ){
             timerText.text = string.Format("{0:00}:{1:00}", 0, 0);   //stop timer when passing
+            showlevel2.show = false;
           }
             if ( SplineCustomMovement.showpanel == true  ){
             timerText.text = string.Format("{0:00}:{1:00}", 0, 0);   //stop timer when passing
+            SplineCustomMovement.showpanel = false;
             }
 
         if (currentTime <= 0) // If time ends, do the following.
@@ -69,7 +71,7 @@ public class Timer : MonoBehaviour
     {
         currentTime = gameTime; //return to value of game Time.
         gameoverPanel.SetActive(false);  //deactivate gameover panel.
-         warningPlayed = false;
+        warningPlayed = false;
     
     } 
 }

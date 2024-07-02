@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ChooseCase : MonoBehaviour
 {
+    public AudioSource audioSource; // Audio source component.
+    public AudioClip caseAudio; // Audio clip to play when time finishes.
+
     public Button Show; 
     public GameObject case1;
     public GameObject case2;
@@ -21,5 +24,7 @@ public class ChooseCase : MonoBehaviour
         case1.SetActive(true);  //activate panel.
         case2.SetActive(false); //
         case3.SetActive(false); 
+        audioSource.PlayOneShot(caseAudio); 
+
     }
 }
