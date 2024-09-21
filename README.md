@@ -1,4 +1,5 @@
-# EndoSimulate, Graduation project of 4th-year biomedical Engineer students- Cairo University
+# EndoSimulate - VR Training for Endoscopic Procedures
+Graduation project of 4th-year biomedical Engineer students- Cairo University
 
 # Overview
 In this project, we address the existing gap in practical experience for medical students in the field of 
@@ -8,14 +9,30 @@ bridge the gap between theoretical knowledge and practical skills in endoscopy f
 developing an immersive environment to train novices on endoscopic procedures through three 
 modalities(Knee Arthroscopy, Upper Endoscope, and Hysteroscopy).
 
-## Demo 
-Please note that the project is still under development, [Our Demo](https://drive.google.com/drive/folders/1nkX2kh4fTo1xBMMGhj5C7JvjUQ_ExHK9?usp=sharing).
+## Importance of the Project
+1. Safe & Controlled Environment: Trainees can practice procedures without concerns about patient safety.
+2. Effective Practice: The VR simulation allows students to practice on various cases as many times as needed, from common procedures to rare and complex cases.
+3. Objective Assessment: After each session, the system evaluates performance based on metrics like time taken, accuracy, and mistakes made. Trainees receive instant feedback for continuous improvement.
 
-## The Assests and 3d Models 
-[Drive Link](https://drive.google.com/drive/folders/161euVUHp4bblDOCB7QliO0fMFc7uVeOm?usp=sharing)
+## Technologies Used
+1. Unity: Our main platform for building the virtual environment, integrating HTC Vive Pro 2 for real-time user interaction.
+2. Blender: Used for creating 3D assets, models, and animations.
+3. HTC Vive Pro 2: Based on a decision matrix, the HTC Vive Pro 2 was selected for its high resolution, wide field of view, and accurate tracking, which is essential for realistic simulation in medical procedures.   [Decision Matrix](https://drive.google.com/file/d/15sWG1CZBfA2iToL4ksl6j90kRFHMQ4XS/view?usp=sharing)
+   
+   ![Decision Matrix](https://drive.google.com/uc?export=view&id=1oIN-y8ovZw-aNF9h-roEi9Qwv-aFem8G)
+   
+## Features
+1. Progress Tracking Website: Trainees can log in to track their progress and view detailed reports of their performance.
+2. Three Training Tracks: The simulation offers different endoscopy tracks, allowing users to choose the type of endoscopy they wish to practice (e.g., Gastroscopy, Colonoscopy).
+3. Multiple Difficulty Levels: Each track has various levels of difficulty, simulating cases from basic to advanced.
+4. Visual & Auditory Feedback: The system provides instructional guidance through visual prompts and auditory cues during the procedures.
 
-## System Structure
-![system](https://github.com/Naira06/EndoSimulate/assets/83358118/385777fc-e5ef-421a-9df5-12a48f6351a2)
+   ### Demo 
+   [![Watch the video](https://img.youtube.com/vi/Juq1ex18UGE/maxresdefault.jpg)](https://youtu.be/Juq1ex18UGE)
+   
+## System Architecture
+
+![Screenshot (683)](https://github.com/user-attachments/assets/4b15248c-f1af-4a2b-adc3-8bfbe032d778)
 
 ## Our WorkFlow
 ![workflow](https://github.com/Naira06/EndoSimulate/assets/83358118/ee63aa16-8d4f-4394-8c68-b3702851ce82)
