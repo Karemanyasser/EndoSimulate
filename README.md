@@ -7,8 +7,7 @@ endoscopy. The problem at hand revolves around the steep learning curve associat
 proficiency in endoscopy, a crucial medical procedure for diagnosis and treatment. This project aims to 
 bridge the gap between theoretical knowledge and practical skills in endoscopy for medical students by 
 developing an immersive environment to train novices on endoscopic procedures through three 
-modalities(Knee Arthroscopy, Upper Endoscope, and Hysteroscopy).
-
+modalities(Knee Arthroscopy, Upper Endoscope, and Hysteroscopy). [Our Paper](https://drive.google.com/file/d/11UJsRSS-PwjYNWfCId2RserrAGtM3VGm/view?usp=sharing)
 ## Importance of the Project
 1. Safe & Controlled Environment: Trainees can practice procedures without concerns about patient safety.
 2. Effective Practice: The VR simulation allows students to practice on various cases as many times as needed, from common procedures to rare and complex cases.
